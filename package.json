@@ -1,0 +1,30 @@
+{
+	"name": "symptoms",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/solid-js": "^2.0.2",
+		"@astrojs/tailwind": "^3.0.1",
+		"@babel/core": "^7.21.0",
+		"astro": "^2.0.16",
+		"autoprefixer": "^10.4.13",
+		"chart.js": "^4.2.1",
+		"cssnano": "^5.1.15",
+		"postcss": "^8.4.21",
+		"postcss-media-minmax": "^5.0.0",
+		"postcss-preset-env": "^8.0.1",
+		"solid-js": "^1.6.11",
+		"tailwindcss": "^3.0.24"
+	},
+	"devDependencies": {
+		"stylelint": "^15.2.0",
+		"stylelint-config-standard": "^30.0.1"
+	}
+}
