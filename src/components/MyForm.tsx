@@ -1,10 +1,10 @@
-import { createSignal, createResource } from "solid-js";
+import { createSignal,For, } from "solid-js";
 
 type QuestionProps = {
   class: string;
   question: string;
   options: { value: number; label: string }[];
-  onAnswer: (value: number) => void;
+  onAnswer: (value: number ) => void;
 };
 
 const Question = (props: QuestionProps) => {
@@ -17,19 +17,19 @@ const Question = (props: QuestionProps) => {
   };
 
   return (
-    <div class="my-4 mx-4 grid ">
-      <p class="text-lg font-medium text-slate-400">{props.question}</p>
-      <div class="grid grid-cols-5 gap-2 mt-2">
+    <div class='my-4 mx-4 grid '>
+      <p class='text-lg font-medium text-slate-400'>{props.question}</p>
+      <div class='grid grid-cols-5 gap-2 mt-2'>
         {props.options.map((option) => (
-          <label class="inline-flex items-center w-full my-2">
+          <label class='inline-flex items-center w-full my-2'>
             <input
-              type="radio"
-              class="form-radio h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
+              type='radio'
+              class='form-radio h-5 w-5 text-indigo-600 transition duration-150 ease-in-out'
               value={option.value}
               checked={selectedOption() === option.value}
               onInput={handleChange}
             />
-            <span class="ml-2 text-sm">{option.label}</span>
+            <span class='ml-2 text-sm'>{option.label}</span>
           </label>
         ))}
       </div>
@@ -61,8 +61,8 @@ const MyForm = () => {
   ];
 
   return (
-    <div class=" relative">
-      <form class="p-4 inset-0 mx-auto border border-solid border-slate-200 bg-slate-900 text-slate-200 rounded-lg grid items-center max-w-[800px] gap-2">
+    <div class=' relative'>
+      <form class='p-4 inset-0 mx-auto border border-solid border-slate-200 bg-slate-900 text-slate-200 rounded-lg grid items-center max-w-[800px] gap-2'>
         {questions.map((question, index) => (
           <Question
             class=""
