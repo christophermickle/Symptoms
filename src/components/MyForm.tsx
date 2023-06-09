@@ -20,7 +20,7 @@ const Question = (props: QuestionProps) => {
     <div class='my-4 mx-4 grid '>
       <p class='text-lg font-medium text-slate-400'>{props.question}</p>
       <div class='grid grid-cols-5 gap-2 mt-2'>
-        {props.options.map((option) => (
+        <For each={props.options}>{(option) => (
           <label class='inline-flex items-center w-full my-2'>
             <input
               type='radio'
@@ -31,7 +31,7 @@ const Question = (props: QuestionProps) => {
             />
             <span class='ml-2 text-sm'>{option.label}</span>
           </label>
-        ))}
+        )}</For>
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ const MyForm = () => {
   return (
     <div class=' relative'>
       <form class='p-4 inset-0 mx-auto border border-solid border-slate-200 bg-slate-900 text-slate-200 rounded-lg grid items-center max-w-[800px] gap-2'>
-        {questions.map((question, index) => (
+        <For each={questions}>{(question, index) => (
           <Question
             class=""
             question={question}
@@ -74,9 +74,9 @@ const MyForm = () => {
               { value: 3, label: "Often" },
               { value: 4, label: "Very often" },
             ]}
-            onAnswer={(value) => handleAnswer(`question${index}`, value)}
+            onAnswer={(value) => handleAnswer(`question${index()}`, value)}
           />
-        ))}
+          )}</For>
         <button
           class="border border-solid text-slate-400 bg- border-slate-200 w-[5rem] mx-auto"
           type="submit"

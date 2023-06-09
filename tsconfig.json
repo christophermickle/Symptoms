@@ -1,8 +1,9 @@
 {
-  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "lib": ["es2018", "es2020", "es2022"],
     "strict": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js"
+    "types": ["solid-js"]
   }
 }
