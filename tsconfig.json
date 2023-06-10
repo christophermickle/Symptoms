@@ -1,9 +1,12 @@
+
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "esnext",
+    "target": "ES2021",
+    "moduleResolution": "node",
     "lib": ["es2021"],
     "strict": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "types": ["solid-js"]
   }
 }

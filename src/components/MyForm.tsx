@@ -4,8 +4,9 @@ type QuestionProps = {
   class: string;
   question: string;
   options: { value: number; label: string }[];
-  onAnswer: (value: number ) => void;
+  onAnswer: (value: number) => void;
 };
+// I have no idea how to fix the issue on line 7. Please help. . . 
 
 const Question = (props: QuestionProps) => {
   const [selectedOption, setSelectedOption] = createSignal<number>();
@@ -14,6 +15,7 @@ const Question = (props: QuestionProps) => {
     const value = parseInt(target.value, 10);
     setSelectedOption(value);
     props.onAnswer(value);
+
   };
 
   return (
